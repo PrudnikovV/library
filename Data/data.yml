@@ -1,6 +1,51 @@
 --- !ruby/object:Library
 books:
 - &1 !ruby/object:Book
+  title: Charlotte's Web
+  author: !ruby/object:Author
+    name: E.B.White
+    biography: ''
+- &3 !ruby/object:Book
+  title: Mieko and the Fifth Treasure
+  author: !ruby/object:Author
+    name: Eleanor Coerr
+    biography: ''
+- &4 !ruby/object:Book
+  title: The Outsiders
+  author: !ruby/object:Author
+    name: S/E/Hinton
+    biography: ''
+- &5 !ruby/object:Book
+  title: The House On Mango Street
+  author: !ruby/object:Author
+    name: Sandra Cisneros
+    biography: ''
+- &8 !ruby/object:Book
+  title: Title
+  author: !ruby/object:Author
+    name: Thomas
+    biography: ''
+- &10 !ruby/object:Book
+  title: Title
+  author: !ruby/object:Author
+    name: Thomas
+    biography: ''
+- &12 !ruby/object:Book
+  title: Title
+  author: !ruby/object:Author
+    name: Thomas
+    biography: ''
+- &14 !ruby/object:Book
+  title: Title
+  author: !ruby/object:Author
+    name: Thomas
+    biography: ''
+- &16 !ruby/object:Book
+  title: Title
+  author: !ruby/object:Author
+    name: Thomas
+    biography: ''
+- &18 !ruby/object:Book
   title: Title
   author: !ruby/object:Author
     name: Thomas
@@ -12,8 +57,110 @@ readers:
   city: Kyiv
   street: Lomon
   house: '4'
+- &6 !ruby/object:Reader
+  name: Al
+  email: Al@ukr.net
+  city: Lubny
+  street: Tolst
+  house: '10'
+- &7 !ruby/object:Reader
+  name: Serg
+  email: Serg@ukr.net
+  city: Lviv
+  street: Sattlers
+  house: '3'
+- !ruby/object:Reader
+  name: Mark
+  email: Mark@ukr.net
+  city: Herson
+  street: Hostel
+  house: '123'
+- &9 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
+- &11 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
+- &13 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
+- &15 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
+- &17 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
+- &19 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
 orders:
 - !ruby/object:Order
   book: *1
   reader: *2
+  date: 2021-10-10
+- !ruby/object:Order
+  book: *3
+  reader: *2
+  date: 2021-12-15
+- !ruby/object:Order
+  book: *4
+  reader: *2
+  date: 2021-05-24
+- !ruby/object:Order
+  book: *5
+  reader: *2
+  date: 2021-05-24
+- !ruby/object:Order
+  book: *4
+  reader: *6
+  date: 2021-05-24
+- !ruby/object:Order
+  book: *4
+  reader: *7
+  date: 2021-05-24
+- !ruby/object:Order
+  book: *5
+  reader: *7
+  date: 2021-05-24
+- !ruby/object:Order
+  book: *8
+  reader: *9
+  date: 2021-10-10
+- !ruby/object:Order
+  book: *10
+  reader: *11
+  date: 2021-10-10
+- !ruby/object:Order
+  book: *12
+  reader: *13
+  date: 2021-10-10
+- !ruby/object:Order
+  book: *14
+  reader: *15
+  date: 2021-10-10
+- !ruby/object:Order
+  book: *16
+  reader: *17
+  date: 2021-10-10
+- !ruby/object:Order
+  book: *18
+  reader: *19
   date: 2021-10-10

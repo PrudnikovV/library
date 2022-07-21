@@ -9,11 +9,13 @@ require 'date'
 class Library
   include Validation
   attr_reader :books, :readers, :orders
+
+  @books = []
+  @readers = []
+  @orders = []
+
   def initialize
     load
-    @books = []
-    @readers = []
-    @orders = []
    end
 
   def add_book(book)
@@ -46,4 +48,29 @@ class Library
     file.close
   end
 
+  def top_reader count=1
+    @orders.map(&:reader).
+      reduce(Hash.new(0)){|counts, el| counts[el] += 1; counts}.
+      sort_by { |key, count| -count}.
+      to_h.
+      keys.
+      first(count)
+  end
+
+  def most_popular_books count=1
+    @orders.map(&:book).
+      reduce(Hash.new(0)){|counts, el| counts[el] += 1; counts}.
+      sort_by { |key, count| -count}.
+      to_h.
+      keys.
+      first(count)
+  end
+
+  def number_of_readers_of_the_most_popular_books some_quantity=3
+    books = most_popular_books some_quantity
+    @orders.select{|n| books.include?(n.book)}.
+      map(&:reader).
+      uniq.
+      size
+  end
 end

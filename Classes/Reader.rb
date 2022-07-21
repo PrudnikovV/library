@@ -9,4 +9,9 @@ class Reader
     @street = street
     @house = house
   end
+
+  def to_s
+    @name
+  end
+
 end

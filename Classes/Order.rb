@@ -5,6 +5,7 @@ require 'date'
 require_relative "../Module/Validation"
 class Order
   include Validation
+  attr_reader :reader, :book
   def initialize(book, reader, date=Date.today)
     is_a_class(book, Book)
     is_a_class(reader, Reader)

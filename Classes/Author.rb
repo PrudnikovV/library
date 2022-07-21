@@ -6,4 +6,8 @@ class Author
     @name = name
     @biography = biography
   end
+
+  def to_s
+    @name
+  end
 end
