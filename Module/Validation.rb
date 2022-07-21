@@ -1,22 +1,9 @@
-Module Validation
+module Validation
   def presence(*param)
-    param.each{ |el| raise Exeptinon.new("All fields must be presence") unless el.is_a? String && !String.empty?}
+    param.each{ |el| raise Exception.new("All fields must be presence") unless el.is_a?(String) && !el.empty?}
   end
 
-  def is_a_book(obj)
-    raise Exception.new("Argument " + obj + " not a Book") unless obj.is_a? Book
+  def is_a_class(obj, need_class)
+    raise Exception.new("Argument " + obj + " not a " + need_class.name) unless obj.is_a? need_class
   end
-
-  def is_a_reader(obj)
-   raise Exception.new("Argument " + obj + " not a Reader") unless obj.is_a? Reader
-  end
-
-  def is_a_author(obj)
-   raise Exception.new("Argument " + obj + " not a Author") unless obj.is_a? Author
-  end
-
-  def is_a_date(obj)
-   raise Exception.new("Argument " + obj + " not a Date") unless obj.is_a? Date
-  end
-
 end

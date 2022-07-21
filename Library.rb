@@ -1,7 +1,7 @@
-require '/Classes.Author'
-require '/Classes.Book'
-require '/Classes.Reader'
-require '/Classes.Order'
+require '/Classes/Author'
+require '/Classes/Book'
+require '/Classes/Reader'
+require '/Classes/Order'
 require "./Module/Validation"
 
 require 'yaml'
@@ -14,8 +14,6 @@ class Library
     @readers = []
     @orders = []
    end
-
-  privat
 
   def add_book(book)
     is_a_book(book)
