@@ -1,5 +1,5 @@
-require "./Module/Validation"
-require "/Author"
+require_relative "../Module/Validation"
+require_relative "Author"
 
 class Book
   include Validation

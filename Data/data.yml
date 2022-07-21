@@ -1,2 +1,19 @@
-Author:
-  
+--- !ruby/object:Library
+books:
+- &1 !ruby/object:Book
+  title: Title
+  author: !ruby/object:Author
+    name: Thomas
+    biography: ''
+readers:
+- &2 !ruby/object:Reader
+  name: Vlad
+  email: Prudnikov@ukr.net
+  city: Kyiv
+  street: Lomon
+  house: '4'
+orders:
+- !ruby/object:Order
+  book: *1
+  reader: *2
+  date: 2021-10-10
