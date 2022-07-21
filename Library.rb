@@ -10,26 +10,34 @@ class Library
   include Validation
   attr_reader :books, :readers, :orders
 
-  @books = []
-  @readers = []
-  @orders = []
-
   def initialize
+    @books = []
+    @authors = []
+    @readers = []
+    @orders = []
     load
    end
 
   def add_book(book)
     is_a_class(book, Book)
-    @books << book
+    book.author = fined_or_add_author(book.author)
+    @books << book until @books.include?(book)
   end
 
   def add_reader(reader)
     is_a_class(reader, Reader)
-    @readers << reader
+    @readers << reader until @readers.include?(reader)
+  end
+
+  def add_author(author)
+    is_a_class(author, Author)
+    @authors << author until @authors.include?(author)
   end
 
   def add_order(order)
     is_a_class(order, Order)
+    order.book = fined_or_add_book(order.book)
+    order.reader = fined_or_add_reader(order.reader)
     @orders << order
   end
 
@@ -73,4 +81,22 @@ class Library
       uniq.
       size
   end
+
+  private
+
+  def fined_or_add_author author
+    author_new = @authors.find{|el| el == author}
+    author_new.nil? ? add_author(author) : author_new
+  end
+
+  def fined_or_add_book book
+    book_new = @books.find{|el| el == book}
+    book_new.nil? ? add_book(book) : book_new
+  end
+
+  def fined_or_add_reader reader
+    reader_new = @readers.find{|el| el == reader}
+    reader_new.nil? ? add_reader(reader) : reader_new
+  end
+
 end

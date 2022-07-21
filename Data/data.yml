@@ -3,7 +3,7 @@ books:
 - &1 !ruby/object:Book
   title: Charlotte's Web
   author: !ruby/object:Author
-    name: E.B.White
+    name: White
     biography: ''
 - &3 !ruby/object:Book
   title: Mieko and the Fifth Treasure
@@ -13,7 +13,7 @@ books:
 - &4 !ruby/object:Book
   title: The Outsiders
   author: !ruby/object:Author
-    name: S/E/Hinton
+    name: Hinton
     biography: ''
 - &5 !ruby/object:Book
   title: The House On Mango Street
@@ -22,34 +22,11 @@ books:
     biography: ''
 - &8 !ruby/object:Book
   title: Title
-  author: !ruby/object:Author
-    name: Thomas
-    biography: ''
-- &10 !ruby/object:Book
-  title: Title
-  author: !ruby/object:Author
-    name: Thomas
-    biography: ''
-- &12 !ruby/object:Book
-  title: Title
-  author: !ruby/object:Author
-    name: Thomas
-    biography: ''
-- &14 !ruby/object:Book
-  title: Title
-  author: !ruby/object:Author
-    name: Thomas
-    biography: ''
-- &16 !ruby/object:Book
-  title: Title
-  author: !ruby/object:Author
-    name: Thomas
-    biography: ''
-- &18 !ruby/object:Book
-  title: Title
-  author: !ruby/object:Author
-    name: Thomas
-    biography: ''
+  author: 
+authors:
+- !ruby/object:Author
+  name: Thomas
+  biography: ''
 readers:
 - &2 !ruby/object:Reader
   name: Vlad
@@ -75,42 +52,6 @@ readers:
   city: Herson
   street: Hostel
   house: '123'
-- &9 !ruby/object:Reader
-  name: Vlad
-  email: Prudnikov@ukr.net
-  city: Kyiv
-  street: Lomon
-  house: '4'
-- &11 !ruby/object:Reader
-  name: Vlad
-  email: Prudnikov@ukr.net
-  city: Kyiv
-  street: Lomon
-  house: '4'
-- &13 !ruby/object:Reader
-  name: Vlad
-  email: Prudnikov@ukr.net
-  city: Kyiv
-  street: Lomon
-  house: '4'
-- &15 !ruby/object:Reader
-  name: Vlad
-  email: Prudnikov@ukr.net
-  city: Kyiv
-  street: Lomon
-  house: '4'
-- &17 !ruby/object:Reader
-  name: Vlad
-  email: Prudnikov@ukr.net
-  city: Kyiv
-  street: Lomon
-  house: '4'
-- &19 !ruby/object:Reader
-  name: Vlad
-  email: Prudnikov@ukr.net
-  city: Kyiv
-  street: Lomon
-  house: '4'
 orders:
 - !ruby/object:Order
   book: *1
@@ -142,25 +83,13 @@ orders:
   date: 2021-05-24
 - !ruby/object:Order
   book: *8
-  reader: *9
+  reader: *2
   date: 2021-10-10
 - !ruby/object:Order
-  book: *10
-  reader: *11
+  book: *8
+  reader: *2
   date: 2021-10-10
 - !ruby/object:Order
-  book: *12
-  reader: *13
-  date: 2021-10-10
-- !ruby/object:Order
-  book: *14
-  reader: *15
-  date: 2021-10-10
-- !ruby/object:Order
-  book: *16
-  reader: *17
-  date: 2021-10-10
-- !ruby/object:Order
-  book: *18
-  reader: *19
+  book: *8
+  reader: *2
   date: 2021-10-10
