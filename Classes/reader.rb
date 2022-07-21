@@ -1,7 +1,9 @@
-require "./Module/Validation"
+# frozen_string_literal: true
 
+require './Module/validation'
+
+# This class for reader
 class Reader
-
   include Validation
   attr_reader :name, :email, :city, :street, :house
 
@@ -18,12 +20,11 @@ class Reader
     @name
   end
 
-  def == other_reader
-    @name == other_reader.name &&
-    @email == other_reader.email &&
-    @city == other_reader.city &&
-    @street == other_reader.street &&
-    @house == other_reader.house
+  def ==(other)
+    @name == other.name &&
+      @email == other.email &&
+      @city == other.city &&
+      @street == other.street &&
+      @house == other.house
   end
-
 end

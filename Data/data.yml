@@ -93,3 +93,7 @@ orders:
   book: *8
   reader: *2
   date: 2021-10-10
+- !ruby/object:Order
+  book: *8
+  reader: *2
+  date: 2021-10-10
