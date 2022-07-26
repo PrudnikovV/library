@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require './Module/validation'
-
 # This class for reader
 class Reader
   include Validation

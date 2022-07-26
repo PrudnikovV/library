@@ -3,7 +3,10 @@
 # This is the module for load save data
 module Storage
   def load
-    file = File.open('Data/data.yml', 'r')
+    file_name = 'data/data.yml'
+
+    return unless File.file?(file_name)
+    file = File.open(file_name, 'r')
     data = YAML.load(file, aliases: true, permitted_classes: [Library, Book, Reader, Order, Author, Date])
     self.books = data.books
     self.readers = data.readers
@@ -12,7 +15,7 @@ module Storage
   end
 
   def save
-    file = File.open('Data/data.yml', 'w')
+    file = File.open('data/data.yml', 'w')
     YAML.dump(self, file)
     file.close
   end

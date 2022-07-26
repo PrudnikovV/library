@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-require_relative 'book'
-require_relative 'reader'
-require_relative '../Module/validation'
-require 'date'
-
 # This class for order
 class Order
   include Validation

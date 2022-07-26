@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-# Validation module
-require_relative '../Module/validation'
-
 # This class for Author
 class Author
   include Validation
