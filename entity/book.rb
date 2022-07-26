@@ -17,9 +17,4 @@ class Book
   def to_s
     "#{@title} (#{@author})"
   end
-
-  def ==(other)
-    @title == other.title &&
-      @author == other.author
-  end
 end
